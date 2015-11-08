@@ -128,6 +128,7 @@
                         <outlet property="phoneImage" destination="CnP-1G-ejY" id="Rsv-JD-FHC"/>
                         <outlet property="recordButton" destination="JEV-88-egB" id="7PP-Er-xfJ"/>
                         <outlet property="redoButton" destination="2pX-AB-JXP" id="32Z-hg-XOb"/>
+                        <outlet property="saveButton" destination="1Hq-2h-JVM" id="68X-Hb-utG"/>
                         <segue destination="jKX-fD-ecZ" kind="push" identifier="saveMotion" id="G87-tg-NHZ"/>
                     </connections>
                 </viewController>
