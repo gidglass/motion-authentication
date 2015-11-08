@@ -1,0 +1,812 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20190A941BE65FD400BF53C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20190A931BE65FD400BF53C9 /* AppDelegate.swift */; };
+		20190A961BE65FD400BF53C9 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20190A951BE65FD400BF53C9 /* StartViewController.swift */; };
+		20190A991BE65FD400BF53C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20190A971BE65FD400BF53C9 /* Main.storyboard */; };
+		20190A9B1BE65FD400BF53C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20190A9A1BE65FD400BF53C9 /* Assets.xcassets */; };
+		20190A9E1BE65FD400BF53C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20190A9C1BE65FD400BF53C9 /* LaunchScreen.storyboard */; };
+		20190AA91BE65FD400BF53C9 /* watch_motionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20190AA81BE65FD400BF53C9 /* watch_motionTests.swift */; };
+		20190AB41BE65FD400BF53C9 /* watch_motionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20190AB31BE65FD400BF53C9 /* watch_motionUITests.swift */; };
+		20190AB91BE65FD400BF53C9 /* watch-motion WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 20190AB81BE65FD400BF53C9 /* watch-motion WatchKit App.app */; };
+		20190ABF1BE65FD400BF53C9 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20190ABD1BE65FD400BF53C9 /* Interface.storyboard */; };
+		20190AC11BE65FD400BF53C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20190AC01BE65FD400BF53C9 /* Assets.xcassets */; };
+		20190AC81BE65FD400BF53C9 /* watch-motion WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 20190AC71BE65FD400BF53C9 /* watch-motion WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		20190ACF1BE65FD400BF53C9 /* WaitInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20190ACE1BE65FD400BF53C9 /* WaitInterfaceController.swift */; };
+		20190AD11BE65FD400BF53C9 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20190AD01BE65FD400BF53C9 /* ExtensionDelegate.swift */; };
+		20190AD31BE65FD400BF53C9 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20190AD21BE65FD400BF53C9 /* NotificationController.swift */; };
+		20190AD51BE65FD400BF53C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20190AD41BE65FD400BF53C9 /* Assets.xcassets */; };
+		20CDFA221BE9B8CC0076504F /* MotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CDFA211BE9B8CC0076504F /* MotionViewController.swift */; };
+		20CDFA241BE9BB110076504F /* WaitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CDFA231BE9BB110076504F /* WaitViewController.swift */; };
+		20CDFA261BE9C32F0076504F /* MotionInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CDFA251BE9C32F0076504F /* MotionInterfaceController.swift */; };
+		20CDFA281BE9C3510076504F /* AuthenticateInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CDFA271BE9C3510076504F /* AuthenticateInterfaceController.swift */; };
+		20D9D3891BED4BD90043D39F /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D9D3881BED4BD90043D39F /* ResultViewController.swift */; };
+		20F3499E1BEC489F00CB51D5 /* MotionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F3499D1BEC489F00CB51D5 /* MotionData.swift */; };
+		20F3499F1BEC489F00CB51D5 /* MotionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F3499D1BEC489F00CB51D5 /* MotionData.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		20190AA51BE65FD400BF53C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20190A881BE65FD400BF53C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20190A8F1BE65FD400BF53C9;
+			remoteInfo = "watch-motion";
+		};
+		20190AB01BE65FD400BF53C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20190A881BE65FD400BF53C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20190A8F1BE65FD400BF53C9;
+			remoteInfo = "watch-motion";
+		};
+		20190ABA1BE65FD400BF53C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20190A881BE65FD400BF53C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20190AB71BE65FD400BF53C9;
+			remoteInfo = "watch-motion WatchKit App";
+		};
+		20190AC91BE65FD400BF53C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20190A881BE65FD400BF53C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20190AC61BE65FD400BF53C9;
+			remoteInfo = "watch-motion WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		20190ADC1BE65FD400BF53C9 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				20190AC81BE65FD400BF53C9 /* watch-motion WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20190AE01BE65FD400BF53C9 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				20190AB91BE65FD400BF53C9 /* watch-motion WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		20190A901BE65FD400BF53C9 /* watch-motion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "watch-motion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		20190A931BE65FD400BF53C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		20190A951BE65FD400BF53C9 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		20190A981BE65FD400BF53C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		20190A9A1BE65FD400BF53C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		20190A9D1BE65FD400BF53C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		20190A9F1BE65FD400BF53C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20190AA41BE65FD400BF53C9 /* watch-motionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "watch-motionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		20190AA81BE65FD400BF53C9 /* watch_motionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watch_motionTests.swift; sourceTree = "<group>"; };
+		20190AAA1BE65FD400BF53C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20190AAF1BE65FD400BF53C9 /* watch-motionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "watch-motionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		20190AB31BE65FD400BF53C9 /* watch_motionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watch_motionUITests.swift; sourceTree = "<group>"; };
+		20190AB51BE65FD400BF53C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20190AB81BE65FD400BF53C9 /* watch-motion WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "watch-motion WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		20190ABE1BE65FD400BF53C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		20190AC01BE65FD400BF53C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		20190AC21BE65FD400BF53C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20190AC71BE65FD400BF53C9 /* watch-motion WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "watch-motion WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		20190ACD1BE65FD400BF53C9 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		20190ACE1BE65FD400BF53C9 /* WaitInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitInterfaceController.swift; sourceTree = "<group>"; };
+		20190AD01BE65FD400BF53C9 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		20190AD21BE65FD400BF53C9 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		20190AD41BE65FD400BF53C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		20190AD61BE65FD400BF53C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20CDFA211BE9B8CC0076504F /* MotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionViewController.swift; sourceTree = "<group>"; };
+		20CDFA231BE9BB110076504F /* WaitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitViewController.swift; sourceTree = "<group>"; };
+		20CDFA251BE9C32F0076504F /* MotionInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionInterfaceController.swift; sourceTree = "<group>"; };
+		20CDFA271BE9C3510076504F /* AuthenticateInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticateInterfaceController.swift; sourceTree = "<group>"; };
+		20D9D3881BED4BD90043D39F /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		20F3499D1BEC489F00CB51D5 /* MotionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionData.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20190A8D1BE65FD400BF53C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20190AA11BE65FD400BF53C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20190AAC1BE65FD400BF53C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20190AC41BE65FD400BF53C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20190A871BE65FD400BF53C9 = {
+			isa = PBXGroup;
+			children = (
+				20190A921BE65FD400BF53C9 /* watch-motion */,
+				20190AA71BE65FD400BF53C9 /* watch-motionTests */,
+				20190AB21BE65FD400BF53C9 /* watch-motionUITests */,
+				20190ABC1BE65FD400BF53C9 /* watch-motion WatchKit App */,
+				20190ACB1BE65FD400BF53C9 /* watch-motion WatchKit Extension */,
+				20190A911BE65FD400BF53C9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		20190A911BE65FD400BF53C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20190A901BE65FD400BF53C9 /* watch-motion.app */,
+				20190AA41BE65FD400BF53C9 /* watch-motionTests.xctest */,
+				20190AAF1BE65FD400BF53C9 /* watch-motionUITests.xctest */,
+				20190AB81BE65FD400BF53C9 /* watch-motion WatchKit App.app */,
+				20190AC71BE65FD400BF53C9 /* watch-motion WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20190A921BE65FD400BF53C9 /* watch-motion */ = {
+			isa = PBXGroup;
+			children = (
+				20190A931BE65FD400BF53C9 /* AppDelegate.swift */,
+				20190A951BE65FD400BF53C9 /* StartViewController.swift */,
+				20190A971BE65FD400BF53C9 /* Main.storyboard */,
+				20CDFA231BE9BB110076504F /* WaitViewController.swift */,
+				20CDFA211BE9B8CC0076504F /* MotionViewController.swift */,
+				20D9D3881BED4BD90043D39F /* ResultViewController.swift */,
+				20190A9A1BE65FD400BF53C9 /* Assets.xcassets */,
+				20190A9C1BE65FD400BF53C9 /* LaunchScreen.storyboard */,
+				20190A9F1BE65FD400BF53C9 /* Info.plist */,
+			);
+			path = "watch-motion";
+			sourceTree = "<group>";
+		};
+		20190AA71BE65FD400BF53C9 /* watch-motionTests */ = {
+			isa = PBXGroup;
+			children = (
+				20190AA81BE65FD400BF53C9 /* watch_motionTests.swift */,
+				20190AAA1BE65FD400BF53C9 /* Info.plist */,
+			);
+			path = "watch-motionTests";
+			sourceTree = "<group>";
+		};
+		20190AB21BE65FD400BF53C9 /* watch-motionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				20190AB31BE65FD400BF53C9 /* watch_motionUITests.swift */,
+				20190AB51BE65FD400BF53C9 /* Info.plist */,
+			);
+			path = "watch-motionUITests";
+			sourceTree = "<group>";
+		};
+		20190ABC1BE65FD400BF53C9 /* watch-motion WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				20190ABD1BE65FD400BF53C9 /* Interface.storyboard */,
+				20190AC01BE65FD400BF53C9 /* Assets.xcassets */,
+				20190AC21BE65FD400BF53C9 /* Info.plist */,
+			);
+			path = "watch-motion WatchKit App";
+			sourceTree = "<group>";
+		};
+		20190ACB1BE65FD400BF53C9 /* watch-motion WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				20F3499D1BEC489F00CB51D5 /* MotionData.swift */,
+				20190ACE1BE65FD400BF53C9 /* WaitInterfaceController.swift */,
+				20CDFA251BE9C32F0076504F /* MotionInterfaceController.swift */,
+				20CDFA271BE9C3510076504F /* AuthenticateInterfaceController.swift */,
+				20190AD01BE65FD400BF53C9 /* ExtensionDelegate.swift */,
+				20190AD21BE65FD400BF53C9 /* NotificationController.swift */,
+				20190AD41BE65FD400BF53C9 /* Assets.xcassets */,
+				20190AD61BE65FD400BF53C9 /* Info.plist */,
+				20190ACC1BE65FD400BF53C9 /* Supporting Files */,
+			);
+			path = "watch-motion WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		20190ACC1BE65FD400BF53C9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				20190ACD1BE65FD400BF53C9 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		20190A8F1BE65FD400BF53C9 /* watch-motion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20190AE11BE65FD400BF53C9 /* Build configuration list for PBXNativeTarget "watch-motion" */;
+			buildPhases = (
+				20190A8C1BE65FD400BF53C9 /* Sources */,
+				20190A8D1BE65FD400BF53C9 /* Frameworks */,
+				20190A8E1BE65FD400BF53C9 /* Resources */,
+				20190AE01BE65FD400BF53C9 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				20190ABB1BE65FD400BF53C9 /* PBXTargetDependency */,
+			);
+			name = "watch-motion";
+			productName = "watch-motion";
+			productReference = 20190A901BE65FD400BF53C9 /* watch-motion.app */;
+			productType = "com.apple.product-type.application";
+		};
+		20190AA31BE65FD400BF53C9 /* watch-motionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20190AE41BE65FD400BF53C9 /* Build configuration list for PBXNativeTarget "watch-motionTests" */;
+			buildPhases = (
+				20190AA01BE65FD400BF53C9 /* Sources */,
+				20190AA11BE65FD400BF53C9 /* Frameworks */,
+				20190AA21BE65FD400BF53C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				20190AA61BE65FD400BF53C9 /* PBXTargetDependency */,
+			);
+			name = "watch-motionTests";
+			productName = "watch-motionTests";
+			productReference = 20190AA41BE65FD400BF53C9 /* watch-motionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		20190AAE1BE65FD400BF53C9 /* watch-motionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20190AE71BE65FD400BF53C9 /* Build configuration list for PBXNativeTarget "watch-motionUITests" */;
+			buildPhases = (
+				20190AAB1BE65FD400BF53C9 /* Sources */,
+				20190AAC1BE65FD400BF53C9 /* Frameworks */,
+				20190AAD1BE65FD400BF53C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				20190AB11BE65FD400BF53C9 /* PBXTargetDependency */,
+			);
+			name = "watch-motionUITests";
+			productName = "watch-motionUITests";
+			productReference = 20190AAF1BE65FD400BF53C9 /* watch-motionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		20190AB71BE65FD400BF53C9 /* watch-motion WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20190ADD1BE65FD400BF53C9 /* Build configuration list for PBXNativeTarget "watch-motion WatchKit App" */;
+			buildPhases = (
+				20190AB61BE65FD400BF53C9 /* Resources */,
+				20190ADC1BE65FD400BF53C9 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				20190ACA1BE65FD400BF53C9 /* PBXTargetDependency */,
+			);
+			name = "watch-motion WatchKit App";
+			productName = "watch-motion WatchKit App";
+			productReference = 20190AB81BE65FD400BF53C9 /* watch-motion WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		20190AC61BE65FD400BF53C9 /* watch-motion WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20190AD91BE65FD400BF53C9 /* Build configuration list for PBXNativeTarget "watch-motion WatchKit Extension" */;
+			buildPhases = (
+				20190AC31BE65FD400BF53C9 /* Sources */,
+				20190AC41BE65FD400BF53C9 /* Frameworks */,
+				20190AC51BE65FD400BF53C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "watch-motion WatchKit Extension";
+			productName = "watch-motion WatchKit Extension";
+			productReference = 20190AC71BE65FD400BF53C9 /* watch-motion WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20190A881BE65FD400BF53C9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Cornell Tech";
+				TargetAttributes = {
+					20190A8F1BE65FD400BF53C9 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 4FRADE5ZJB;
+					};
+					20190AA31BE65FD400BF53C9 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 4FRADE5ZJB;
+						TestTargetID = 20190A8F1BE65FD400BF53C9;
+					};
+					20190AAE1BE65FD400BF53C9 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 4FRADE5ZJB;
+						TestTargetID = 20190A8F1BE65FD400BF53C9;
+					};
+					20190AB71BE65FD400BF53C9 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 4FRADE5ZJB;
+					};
+					20190AC61BE65FD400BF53C9 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 4FRADE5ZJB;
+					};
+				};
+			};
+			buildConfigurationList = 20190A8B1BE65FD400BF53C9 /* Build configuration list for PBXProject "watch-motion" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 20190A871BE65FD400BF53C9;
+			productRefGroup = 20190A911BE65FD400BF53C9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				20190A8F1BE65FD400BF53C9 /* watch-motion */,
+				20190AA31BE65FD400BF53C9 /* watch-motionTests */,
+				20190AAE1BE65FD400BF53C9 /* watch-motionUITests */,
+				20190AB71BE65FD400BF53C9 /* watch-motion WatchKit App */,
+				20190AC61BE65FD400BF53C9 /* watch-motion WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		20190A8E1BE65FD400BF53C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20190A9E1BE65FD400BF53C9 /* LaunchScreen.storyboard in Resources */,
+				20190A9B1BE65FD400BF53C9 /* Assets.xcassets in Resources */,
+				20190A991BE65FD400BF53C9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20190AA21BE65FD400BF53C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20190AAD1BE65FD400BF53C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20190AB61BE65FD400BF53C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20190AC11BE65FD400BF53C9 /* Assets.xcassets in Resources */,
+				20190ABF1BE65FD400BF53C9 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20190AC51BE65FD400BF53C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20190AD51BE65FD400BF53C9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20190A8C1BE65FD400BF53C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20190A961BE65FD400BF53C9 /* StartViewController.swift in Sources */,
+				20190A941BE65FD400BF53C9 /* AppDelegate.swift in Sources */,
+				20CDFA221BE9B8CC0076504F /* MotionViewController.swift in Sources */,
+				20CDFA241BE9BB110076504F /* WaitViewController.swift in Sources */,
+				20F3499E1BEC489F00CB51D5 /* MotionData.swift in Sources */,
+				20D9D3891BED4BD90043D39F /* ResultViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20190AA01BE65FD400BF53C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20190AA91BE65FD400BF53C9 /* watch_motionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20190AAB1BE65FD400BF53C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20190AB41BE65FD400BF53C9 /* watch_motionUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20190AC31BE65FD400BF53C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20CDFA281BE9C3510076504F /* AuthenticateInterfaceController.swift in Sources */,
+				20F3499F1BEC489F00CB51D5 /* MotionData.swift in Sources */,
+				20190AD31BE65FD400BF53C9 /* NotificationController.swift in Sources */,
+				20CDFA261BE9C32F0076504F /* MotionInterfaceController.swift in Sources */,
+				20190AD11BE65FD400BF53C9 /* ExtensionDelegate.swift in Sources */,
+				20190ACF1BE65FD400BF53C9 /* WaitInterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		20190AA61BE65FD400BF53C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20190A8F1BE65FD400BF53C9 /* watch-motion */;
+			targetProxy = 20190AA51BE65FD400BF53C9 /* PBXContainerItemProxy */;
+		};
+		20190AB11BE65FD400BF53C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20190A8F1BE65FD400BF53C9 /* watch-motion */;
+			targetProxy = 20190AB01BE65FD400BF53C9 /* PBXContainerItemProxy */;
+		};
+		20190ABB1BE65FD400BF53C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20190AB71BE65FD400BF53C9 /* watch-motion WatchKit App */;
+			targetProxy = 20190ABA1BE65FD400BF53C9 /* PBXContainerItemProxy */;
+		};
+		20190ACA1BE65FD400BF53C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20190AC61BE65FD400BF53C9 /* watch-motion WatchKit Extension */;
+			targetProxy = 20190AC91BE65FD400BF53C9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		20190A971BE65FD400BF53C9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20190A981BE65FD400BF53C9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		20190A9C1BE65FD400BF53C9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20190A9D1BE65FD400BF53C9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		20190ABD1BE65FD400BF53C9 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20190ABE1BE65FD400BF53C9 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		20190AD71BE65FD400BF53C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		20190AD81BE65FD400BF53C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		20190ADA1BE65FD400BF53C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "watch-motion WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.cs5435.watch-motion.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		20190ADB1BE65FD400BF53C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "watch-motion WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.cs5435.watch-motion.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		20190ADE1BE65FD400BF53C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = watch_motion_WatchKit_Extension;
+				INFOPLIST_FILE = "watch-motion WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.cs5435.watch-motion.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		20190ADF1BE65FD400BF53C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = watch_motion_WatchKit_Extension;
+				INFOPLIST_FILE = "watch-motion WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.cs5435.watch-motion.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		20190AE21BE65FD400BF53C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "watch-motion/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.cs5435.watch-motion";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		20190AE31BE65FD400BF53C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "watch-motion/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.cs5435.watch-motion";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		20190AE51BE65FD400BF53C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "watch-motionTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.cs5435.watch-motionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/watch-motion.app/watch-motion";
+			};
+			name = Debug;
+		};
+		20190AE61BE65FD400BF53C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "watch-motionTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.cs5435.watch-motionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/watch-motion.app/watch-motion";
+			};
+			name = Release;
+		};
+		20190AE81BE65FD400BF53C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "watch-motionUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.cs5435.watch-motionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "watch-motion";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		20190AE91BE65FD400BF53C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "watch-motionUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.cs5435.watch-motionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "watch-motion";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20190A8B1BE65FD400BF53C9 /* Build configuration list for PBXProject "watch-motion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20190AD71BE65FD400BF53C9 /* Debug */,
+				20190AD81BE65FD400BF53C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20190AD91BE65FD400BF53C9 /* Build configuration list for PBXNativeTarget "watch-motion WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20190ADA1BE65FD400BF53C9 /* Debug */,
+				20190ADB1BE65FD400BF53C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20190ADD1BE65FD400BF53C9 /* Build configuration list for PBXNativeTarget "watch-motion WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20190ADE1BE65FD400BF53C9 /* Debug */,
+				20190ADF1BE65FD400BF53C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20190AE11BE65FD400BF53C9 /* Build configuration list for PBXNativeTarget "watch-motion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20190AE21BE65FD400BF53C9 /* Debug */,
+				20190AE31BE65FD400BF53C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20190AE41BE65FD400BF53C9 /* Build configuration list for PBXNativeTarget "watch-motionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20190AE51BE65FD400BF53C9 /* Debug */,
+				20190AE61BE65FD400BF53C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20190AE71BE65FD400BF53C9 /* Build configuration list for PBXNativeTarget "watch-motionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20190AE81BE65FD400BF53C9 /* Debug */,
+				20190AE91BE65FD400BF53C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20190A881BE65FD400BF53C9 /* Project object */;
+}

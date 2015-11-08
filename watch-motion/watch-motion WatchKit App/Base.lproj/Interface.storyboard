@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9019"/>
+    </dependencies>
+    <scenes>
+        <!--start-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="start" id="AgC-eL-Hgc" customClass="WaitInterfaceController" customModule="watch_motion_WatchKit_Extension">
+                    <items>
+                        <label width="127" alignment="center" text="First record motion on your iPhone..." numberOfLines="0" id="QiW-FQ-CBi">
+                            <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--recordMotion-->
+        <scene sceneID="IY9-8Z-4m4">
+            <objects>
+                <controller identifier="recordMotion" id="TT6-Rq-jdi" customClass="MotionInterfaceController" customModule="watch_motion_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="5sZ-lR-xEY">
+                            <items>
+                                <button width="1" alignment="left" title="Record" id="wHp-wv-o8y">
+                                    <connections>
+                                        <action selector="record" destination="TT6-Rq-jdi" id="F2S-Jd-bXz"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Redo" id="U6f-ME-NbB">
+                                    <connections>
+                                        <action selector="redo" destination="TT6-Rq-jdi" id="nta-0T-Sp7"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="4s5-Pi-Orv"/>
+                        <button width="1" alignment="left" title="Save" id="jId-o8-2Qq">
+                            <connections>
+                                <action selector="saveMotion" destination="TT6-Rq-jdi" id="A67-56-m92"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="recordButton" destination="wHp-wv-o8y" id="u7N-bE-bzt"/>
+                        <outlet property="redoButton" destination="U6f-ME-NbB" id="oFl-C0-Izw"/>
+                        <outlet property="saveButton" destination="jId-o8-2Qq" id="sGb-ca-yCC"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="423" y="345"/>
+        </scene>
+        <!--authenticate-->
+        <scene sceneID="X5E-oy-d00">
+            <objects>
+                <controller identifier="authenticate" id="HiE-gt-OpL" customClass="AuthenticateInterfaceController" customModule="watch_motion_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Label" id="cE6-Gt-0fN"/>
+                        <label alignment="left" text="Label" id="8iN-So-YaV"/>
+                        <label alignment="left" text="Label" id="ffr-03-M6F"/>
+                    </items>
+                    <connections>
+                        <outlet property="xLabel" destination="cE6-Gt-0fN" id="sU1-hA-8Bc"/>
+                        <outlet property="yLabel" destination="8iN-So-YaV" id="JtM-L8-Fr3"/>
+                        <outlet property="zLabel" destination="ffr-03-M6F" id="RWN-lG-FgO"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="632" y="345"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="watch_motion_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>
