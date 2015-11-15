@@ -13,8 +13,8 @@ class WaitViewController: UIViewController, WCSessionDelegate {
     @IBOutlet weak var watchImage: UIImageView!
 
     var session: WCSession!
-    var recordedData: MotionData! // model passed from previous controller
-
+    var phoneData: MotionData! // model passed from previous controller
+    var watchData: MotionData!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +27,17 @@ class WaitViewController: UIViewController, WCSessionDelegate {
             session.activateSession()
         }
         
-        self.sendMessage(["status": "waiting"])
+//        self.sendMessage(["status": "waiting"])
         
         
         // Animate
         shake(watchImage)
         
-        print(recordedData.x) // TESTING PURPOSES!
+        print("PHONE X:") // TESTING PURPOSES!
+        print(phoneData.x) // TESTING PURPOSES!
+        
+        print("WATCH X:") // TESTING PURPOSES!
+        print(watchData.x) // TESTING PURPOSES!
     }
     
     // Shake animation
@@ -62,23 +66,23 @@ class WaitViewController: UIViewController, WCSessionDelegate {
                 print(error)
         })
     }
-    
-    func session (session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
-        //handle received message
-        let status = message["status"] as! String
-        print("STATUS: \(status)")
-        
-        if status == "recorded" {
-            dispatch_async(dispatch_get_main_queue()) {
-                self.performSegueWithIdentifier("authenticate", sender: self)
-                print("AUTHENTICATING")
-            }
-
-        }
-        //
-        //
-        //        replyHandler(["Value":"Hello Watch"])
-    }
+//    
+//    func session (session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
+//        //handle received message
+//        let status = message["status"] as! String
+//        print("STATUS: \(status)")
+//        
+//        if status == "recorded" {
+//            dispatch_async(dispatch_get_main_queue()) {
+//                self.performSegueWithIdentifier("authenticate", sender: self)
+//                print("AUTHENTICATING")
+//            }
+//
+//        }
+//        //
+//        //
+//        //        replyHandler(["Value":"Hello Watch"])
+//    }
 
     /*
     // MARK: - Navigation

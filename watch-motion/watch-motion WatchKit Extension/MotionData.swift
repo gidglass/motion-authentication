@@ -44,7 +44,7 @@ class MotionData {
         self.z.removeAll()
     }
     
-    func collectData (SAMPLE_SIZE:Int = 100, handler:()-> Void) {
+    func collectData (SAMPLE_SIZE:Int = 100, callback: () -> ()) {
         if motionManager.accelerometerAvailable {
             var sampleSize:Int = 0
             let queue = NSOperationQueue.mainQueue()
@@ -69,9 +69,8 @@ class MotionData {
                     print("Y COUNT: ", self.y.count)
                     print("Z COUNT: ", self.z.count)
 
-                    // Callback and change button states
-                    handler()
-                    
+                    // Signal callback in main thread
+                    callback()
                     return
                 }
             })

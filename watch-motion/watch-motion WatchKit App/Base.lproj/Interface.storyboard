@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9019"/>
     </dependencies>
     <scenes>
         <!--start-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller identifier="start" id="AgC-eL-Hgc" customClass="WaitInterfaceController" customModule="watch_motion_WatchKit_Extension">
+                <controller identifier="start" id="AgC-eL-Hgc" customClass="MotionInterfaceController" customModule="watch_motion_WatchKit_Extension">
                     <items>
                         <label width="127" alignment="center" text="First record motion on your iPhone..." numberOfLines="0" id="QiW-FQ-CBi">
                             <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
@@ -21,7 +21,7 @@
         <!--recordMotion-->
         <scene sceneID="IY9-8Z-4m4">
             <objects>
-                <controller identifier="recordMotion" id="TT6-Rq-jdi" customClass="MotionInterfaceController" customModule="watch_motion_WatchKit_Extension">
+                <controller identifier="recordMotion" id="TT6-Rq-jdi" customClass="Motion2InterfaceController" customModule="watch_motion_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" layout="vertical" id="5sZ-lR-xEY">
                             <items>

@@ -9,7 +9,7 @@
 import UIKit
 import WatchConnectivity
 
-class MotionViewController: UIViewController {
+class MotionViewController: UIViewController, WCSessionDelegate {
 
     let SAMPLE_SIZE = 100 // number of samples to record
 
@@ -18,13 +18,21 @@ class MotionViewController: UIViewController {
     @IBOutlet weak var isRecording: UIActivityIndicatorView!
     @IBOutlet weak var phoneImage: UIImageView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
-//    @IBOutlet weak var recordingProgress: UIProgressView!
     
+    var phoneData = MotionData()
+    var watchData = MotionData()
     var session: WCSession!
-    var recordedData = MotionData() // model
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Check is Apple Watch is reachable
+        if (WCSession.isSupported()) {
+            print("WCSession is supported 2")
+            session = WCSession.defaultSession()
+            session.delegate = self
+            session.activateSession()
+        }
 
         // Initialize button states
         saveButton.enabled = false
@@ -54,7 +62,8 @@ class MotionViewController: UIViewController {
 
     @IBAction func redo(sender: UIButton) {
         // Clear recorded data
-        recordedData.clearData()
+        phoneData.clearData()
+        watchData.clearData()
         
         // Change button states
         UIView.animateWithDuration(0.3, animations: {
@@ -75,8 +84,14 @@ class MotionViewController: UIViewController {
             self.recordButton.alpha = 0.3
         })
         
-        // Collect sensor data
-        recordedData.collectData(SAMPLE_SIZE, handler:toggleButtonStates)
+        // Signal Apple Watch to record data
+        self.sendMessage(["status":"recording"])
+        
+        // Start collecting data on iPhone
+        phoneData.collectData(SAMPLE_SIZE, callback: {
+            self.toggleButtonStates()
+        })
+
     }
     
     func toggleButtonStates () {
@@ -89,11 +104,30 @@ class MotionViewController: UIViewController {
         })
     }
     
+    /* WATCH CONNECTIVITY */
+    
+    func sendMessage (message: AnyObject) {
+        session.sendMessage(message as! [String : AnyObject],
+            replyHandler: { replyMessage in
+                // Grab values
+                let x = replyMessage["x"] as! [Double]
+                let y = replyMessage["y"] as! [Double]
+                let z = replyMessage["z"] as! [Double]
+                
+                // Create new object
+                self.watchData = MotionData(x: x, y: y, z: z)
+            },
+            errorHandler: {error in
+                print(error)
+        })
+    }
+    
     /* NAVIGATION */
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Update model and pass data to next controller
         let waitVC = segue.destinationViewController as! WaitViewController
-        waitVC.recordedData = self.recordedData.copy()
+        waitVC.phoneData = self.phoneData.copy()
+        waitVC.watchData = self.watchData.copy()
     }
 }

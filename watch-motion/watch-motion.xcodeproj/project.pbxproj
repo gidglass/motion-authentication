@@ -22,9 +22,10 @@
 		20190AD11BE65FD400BF53C9 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20190AD01BE65FD400BF53C9 /* ExtensionDelegate.swift */; };
 		20190AD31BE65FD400BF53C9 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20190AD21BE65FD400BF53C9 /* NotificationController.swift */; };
 		20190AD51BE65FD400BF53C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20190AD41BE65FD400BF53C9 /* Assets.xcassets */; };
+		209BD76D1BF810BB00128958 /* MotionInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209BD76C1BF810BB00128958 /* MotionInterfaceController.swift */; };
 		20CDFA221BE9B8CC0076504F /* MotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CDFA211BE9B8CC0076504F /* MotionViewController.swift */; };
 		20CDFA241BE9BB110076504F /* WaitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CDFA231BE9BB110076504F /* WaitViewController.swift */; };
-		20CDFA261BE9C32F0076504F /* MotionInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CDFA251BE9C32F0076504F /* MotionInterfaceController.swift */; };
+		20CDFA261BE9C32F0076504F /* Motion2InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CDFA251BE9C32F0076504F /* Motion2InterfaceController.swift */; };
 		20CDFA281BE9C3510076504F /* AuthenticateInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CDFA271BE9C3510076504F /* AuthenticateInterfaceController.swift */; };
 		20D9D3891BED4BD90043D39F /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D9D3881BED4BD90043D39F /* ResultViewController.swift */; };
 		20F3499E1BEC489F00CB51D5 /* MotionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F3499D1BEC489F00CB51D5 /* MotionData.swift */; };
@@ -112,9 +113,10 @@
 		20190AD21BE65FD400BF53C9 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		20190AD41BE65FD400BF53C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20190AD61BE65FD400BF53C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		209BD76C1BF810BB00128958 /* MotionInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionInterfaceController.swift; sourceTree = "<group>"; };
 		20CDFA211BE9B8CC0076504F /* MotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionViewController.swift; sourceTree = "<group>"; };
 		20CDFA231BE9BB110076504F /* WaitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitViewController.swift; sourceTree = "<group>"; };
-		20CDFA251BE9C32F0076504F /* MotionInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionInterfaceController.swift; sourceTree = "<group>"; };
+		20CDFA251BE9C32F0076504F /* Motion2InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Motion2InterfaceController.swift; sourceTree = "<group>"; };
 		20CDFA271BE9C3510076504F /* AuthenticateInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticateInterfaceController.swift; sourceTree = "<group>"; };
 		20D9D3881BED4BD90043D39F /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		20F3499D1BEC489F00CB51D5 /* MotionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionData.swift; sourceTree = "<group>"; };
@@ -225,7 +227,8 @@
 			children = (
 				20F3499D1BEC489F00CB51D5 /* MotionData.swift */,
 				20190ACE1BE65FD400BF53C9 /* WaitInterfaceController.swift */,
-				20CDFA251BE9C32F0076504F /* MotionInterfaceController.swift */,
+				20CDFA251BE9C32F0076504F /* Motion2InterfaceController.swift */,
+				209BD76C1BF810BB00128958 /* MotionInterfaceController.swift */,
 				20CDFA271BE9C3510076504F /* AuthenticateInterfaceController.swift */,
 				20190AD01BE65FD400BF53C9 /* ExtensionDelegate.swift */,
 				20190AD21BE65FD400BF53C9 /* NotificationController.swift */,
@@ -473,7 +476,8 @@
 				20CDFA281BE9C3510076504F /* AuthenticateInterfaceController.swift in Sources */,
 				20F3499F1BEC489F00CB51D5 /* MotionData.swift in Sources */,
 				20190AD31BE65FD400BF53C9 /* NotificationController.swift in Sources */,
-				20CDFA261BE9C32F0076504F /* MotionInterfaceController.swift in Sources */,
+				209BD76D1BF810BB00128958 /* MotionInterfaceController.swift in Sources */,
+				20CDFA261BE9C32F0076504F /* Motion2InterfaceController.swift in Sources */,
 				20190AD11BE65FD400BF53C9 /* ExtensionDelegate.swift in Sources */,
 				20190ACF1BE65FD400BF53C9 /* WaitInterfaceController.swift in Sources */,
 			);
