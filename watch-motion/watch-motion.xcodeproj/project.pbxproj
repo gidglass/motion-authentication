@@ -18,15 +18,20 @@
 		20190ABF1BE65FD400BF53C9 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20190ABD1BE65FD400BF53C9 /* Interface.storyboard */; };
 		20190AC11BE65FD400BF53C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20190AC01BE65FD400BF53C9 /* Assets.xcassets */; };
 		20190AC81BE65FD400BF53C9 /* watch-motion WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 20190AC71BE65FD400BF53C9 /* watch-motion WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		20190ACF1BE65FD400BF53C9 /* WaitInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20190ACE1BE65FD400BF53C9 /* WaitInterfaceController.swift */; };
 		20190AD11BE65FD400BF53C9 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20190AD01BE65FD400BF53C9 /* ExtensionDelegate.swift */; };
 		20190AD31BE65FD400BF53C9 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20190AD21BE65FD400BF53C9 /* NotificationController.swift */; };
 		20190AD51BE65FD400BF53C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20190AD41BE65FD400BF53C9 /* Assets.xcassets */; };
+		208881E31BF8E21A00ECFE1B /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 208881E01BF8E21A00ECFE1B /* Raleway-Light.ttf */; };
+		208881E41BF8E21A00ECFE1B /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 208881E01BF8E21A00ECFE1B /* Raleway-Light.ttf */; };
+		208881E51BF8E21A00ECFE1B /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 208881E01BF8E21A00ECFE1B /* Raleway-Light.ttf */; };
+		208881E61BF8E21A00ECFE1B /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 208881E11BF8E21A00ECFE1B /* Raleway-Medium.ttf */; };
+		208881E71BF8E21A00ECFE1B /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 208881E11BF8E21A00ECFE1B /* Raleway-Medium.ttf */; };
+		208881E81BF8E21A00ECFE1B /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 208881E11BF8E21A00ECFE1B /* Raleway-Medium.ttf */; };
+		208881E91BF8E21A00ECFE1B /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 208881E21BF8E21A00ECFE1B /* Raleway-Regular.ttf */; };
+		208881EA1BF8E21A00ECFE1B /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 208881E21BF8E21A00ECFE1B /* Raleway-Regular.ttf */; };
+		208881EB1BF8E21A00ECFE1B /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 208881E21BF8E21A00ECFE1B /* Raleway-Regular.ttf */; };
 		209BD76D1BF810BB00128958 /* MotionInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209BD76C1BF810BB00128958 /* MotionInterfaceController.swift */; };
 		20CDFA221BE9B8CC0076504F /* MotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CDFA211BE9B8CC0076504F /* MotionViewController.swift */; };
-		20CDFA241BE9BB110076504F /* WaitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CDFA231BE9BB110076504F /* WaitViewController.swift */; };
-		20CDFA261BE9C32F0076504F /* Motion2InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CDFA251BE9C32F0076504F /* Motion2InterfaceController.swift */; };
-		20CDFA281BE9C3510076504F /* AuthenticateInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CDFA271BE9C3510076504F /* AuthenticateInterfaceController.swift */; };
 		20D9D3891BED4BD90043D39F /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D9D3881BED4BD90043D39F /* ResultViewController.swift */; };
 		20F3499E1BEC489F00CB51D5 /* MotionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F3499D1BEC489F00CB51D5 /* MotionData.swift */; };
 		20F3499F1BEC489F00CB51D5 /* MotionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F3499D1BEC489F00CB51D5 /* MotionData.swift */; };
@@ -108,16 +113,15 @@
 		20190AC21BE65FD400BF53C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20190AC71BE65FD400BF53C9 /* watch-motion WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "watch-motion WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20190ACD1BE65FD400BF53C9 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		20190ACE1BE65FD400BF53C9 /* WaitInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitInterfaceController.swift; sourceTree = "<group>"; };
 		20190AD01BE65FD400BF53C9 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		20190AD21BE65FD400BF53C9 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		20190AD41BE65FD400BF53C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20190AD61BE65FD400BF53C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		208881E01BF8E21A00ECFE1B /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Light.ttf"; path = "../../Downloads/Raleway/Raleway-Light.ttf"; sourceTree = "<group>"; };
+		208881E11BF8E21A00ECFE1B /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Medium.ttf"; path = "../../Downloads/Raleway/Raleway-Medium.ttf"; sourceTree = "<group>"; };
+		208881E21BF8E21A00ECFE1B /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Regular.ttf"; path = "../../Downloads/Raleway/Raleway-Regular.ttf"; sourceTree = "<group>"; };
 		209BD76C1BF810BB00128958 /* MotionInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionInterfaceController.swift; sourceTree = "<group>"; };
 		20CDFA211BE9B8CC0076504F /* MotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionViewController.swift; sourceTree = "<group>"; };
-		20CDFA231BE9BB110076504F /* WaitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitViewController.swift; sourceTree = "<group>"; };
-		20CDFA251BE9C32F0076504F /* Motion2InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Motion2InterfaceController.swift; sourceTree = "<group>"; };
-		20CDFA271BE9C3510076504F /* AuthenticateInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticateInterfaceController.swift; sourceTree = "<group>"; };
 		20D9D3881BED4BD90043D39F /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		20F3499D1BEC489F00CB51D5 /* MotionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,6 +161,7 @@
 		20190A871BE65FD400BF53C9 = {
 			isa = PBXGroup;
 			children = (
+				208881DF1BF8E1E900ECFE1B /* Resources */,
 				20190A921BE65FD400BF53C9 /* watch-motion */,
 				20190AA71BE65FD400BF53C9 /* watch-motionTests */,
 				20190AB21BE65FD400BF53C9 /* watch-motionUITests */,
@@ -185,7 +190,6 @@
 				20190A971BE65FD400BF53C9 /* Main.storyboard */,
 				20190A951BE65FD400BF53C9 /* StartViewController.swift */,
 				20CDFA211BE9B8CC0076504F /* MotionViewController.swift */,
-				20CDFA231BE9BB110076504F /* WaitViewController.swift */,
 				20D9D3881BED4BD90043D39F /* ResultViewController.swift */,
 				20190A9A1BE65FD400BF53C9 /* Assets.xcassets */,
 				20190A9C1BE65FD400BF53C9 /* LaunchScreen.storyboard */,
@@ -226,10 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				20F3499D1BEC489F00CB51D5 /* MotionData.swift */,
-				20190ACE1BE65FD400BF53C9 /* WaitInterfaceController.swift */,
-				20CDFA251BE9C32F0076504F /* Motion2InterfaceController.swift */,
 				209BD76C1BF810BB00128958 /* MotionInterfaceController.swift */,
-				20CDFA271BE9C3510076504F /* AuthenticateInterfaceController.swift */,
 				20190AD01BE65FD400BF53C9 /* ExtensionDelegate.swift */,
 				20190AD21BE65FD400BF53C9 /* NotificationController.swift */,
 				20190AD41BE65FD400BF53C9 /* Assets.xcassets */,
@@ -245,6 +246,16 @@
 				20190ACD1BE65FD400BF53C9 /* PushNotificationPayload.apns */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		208881DF1BF8E1E900ECFE1B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				208881E01BF8E21A00ECFE1B /* Raleway-Light.ttf */,
+				208881E11BF8E21A00ECFE1B /* Raleway-Medium.ttf */,
+				208881E21BF8E21A00ECFE1B /* Raleway-Regular.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,8 +412,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				20190A9E1BE65FD400BF53C9 /* LaunchScreen.storyboard in Resources */,
+				208881E91BF8E21A00ECFE1B /* Raleway-Regular.ttf in Resources */,
 				20190A9B1BE65FD400BF53C9 /* Assets.xcassets in Resources */,
+				208881E61BF8E21A00ECFE1B /* Raleway-Medium.ttf in Resources */,
 				20190A991BE65FD400BF53C9 /* Main.storyboard in Resources */,
+				208881E31BF8E21A00ECFE1B /* Raleway-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +438,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				208881E41BF8E21A00ECFE1B /* Raleway-Light.ttf in Resources */,
+				208881EA1BF8E21A00ECFE1B /* Raleway-Regular.ttf in Resources */,
+				208881E71BF8E21A00ECFE1B /* Raleway-Medium.ttf in Resources */,
 				20190AC11BE65FD400BF53C9 /* Assets.xcassets in Resources */,
 				20190ABF1BE65FD400BF53C9 /* Interface.storyboard in Resources */,
 			);
@@ -434,6 +451,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				20190AD51BE65FD400BF53C9 /* Assets.xcassets in Resources */,
+				208881E81BF8E21A00ECFE1B /* Raleway-Medium.ttf in Resources */,
+				208881E51BF8E21A00ECFE1B /* Raleway-Light.ttf in Resources */,
+				208881EB1BF8E21A00ECFE1B /* Raleway-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,7 +467,6 @@
 				20190A961BE65FD400BF53C9 /* StartViewController.swift in Sources */,
 				20190A941BE65FD400BF53C9 /* AppDelegate.swift in Sources */,
 				20CDFA221BE9B8CC0076504F /* MotionViewController.swift in Sources */,
-				20CDFA241BE9BB110076504F /* WaitViewController.swift in Sources */,
 				20F3499E1BEC489F00CB51D5 /* MotionData.swift in Sources */,
 				20D9D3891BED4BD90043D39F /* ResultViewController.swift in Sources */,
 			);
@@ -473,13 +492,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20CDFA281BE9C3510076504F /* AuthenticateInterfaceController.swift in Sources */,
 				20F3499F1BEC489F00CB51D5 /* MotionData.swift in Sources */,
 				20190AD31BE65FD400BF53C9 /* NotificationController.swift in Sources */,
 				209BD76D1BF810BB00128958 /* MotionInterfaceController.swift in Sources */,
-				20CDFA261BE9C32F0076504F /* Motion2InterfaceController.swift in Sources */,
 				20190AD11BE65FD400BF53C9 /* ExtensionDelegate.swift in Sources */,
-				20190ACF1BE65FD400BF53C9 /* WaitInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

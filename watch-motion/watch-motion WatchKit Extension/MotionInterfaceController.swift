@@ -11,8 +11,15 @@ import Foundation
 import WatchConnectivity
 
 class MotionInterfaceController: WKInterfaceController, WCSessionDelegate {
+    @IBOutlet var statusLabel: WKInterfaceLabel!
     var recordedData = MotionData()
     var session: WCSession!
+    var currentState = UserState.Waiting
+    
+    // Still tweaking - trying to make sure watch in sync with iPhone...
+    enum UserState {
+        case Waiting, Recording, Authenticating
+    }
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -28,6 +35,17 @@ class MotionInterfaceController: WKInterfaceController, WCSessionDelegate {
             session.delegate = self
             session.activateSession()
         }
+        
+        switch currentState {
+            case .Recording:
+                self.statusLabel.setText("Recording Motion!")
+                break
+            case .Authenticating:
+                self.statusLabel.setText("Waiting to authenticate...")
+                break
+            default:
+                self.statusLabel.setText("Follow instructions on your iPhone.")
+        }
     }
 
     override func didDeactivate() {
@@ -42,6 +60,10 @@ class MotionInterfaceController: WKInterfaceController, WCSessionDelegate {
         
         if status == "recording" {
             print ("WATCH RECORDING")
+            dispatch_async(dispatch_get_main_queue()) {
+                self.currentState = .Recording
+                self.statusLabel.setText("Recording motion!")
+            }
             self.recordedData.collectData(callback: {
                 
                 let watchData = [
@@ -51,14 +73,13 @@ class MotionInterfaceController: WKInterfaceController, WCSessionDelegate {
                 ]
                 
                 replyHandler(watchData)
+                
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.currentState = .Authenticating
+                    self.statusLabel.setText("Waiting to authenticate...")
+                }
             })
         }
-        
-//        //Use this to update the UI instantaneously (otherwise, takes a little while)
-//        dispatch_async(dispatch_get_main_queue()) {
-//            self.counterData.append(counterValue!)
-//            self.mainTableView.reloadData()
-//        }
     }
 
     func finishedRecording () {

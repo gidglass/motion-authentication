@@ -10,19 +10,26 @@ import UIKit
 
 class ResultViewController: UIViewController {
     @IBOutlet weak var restartButton: UIBarButtonItem!
+    
+    var phoneData: MotionData!
+    var watchData: MotionData!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        print("PHONE X:") // TESTING PURPOSES!
+        print(phoneData.x) // TESTING PURPOSES!
+        
+        print("WATCH X:") // TESTING PURPOSES!
+        print(watchData.x) // TESTING PURPOSES!
+        
+        
+        // TODO: Convert MotionData objects (watch and phone) into JSON
+        // format and prepare for an HTTP request and data processing
     }
     
-
     /*
     // MARK: - Navigation
 

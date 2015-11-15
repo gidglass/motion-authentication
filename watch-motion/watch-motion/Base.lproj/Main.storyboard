@@ -4,6 +4,17 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Raleway-Medium.ttf">
+            <string>Raleway-Medium</string>
+            <string>Raleway-Medium</string>
+            <string>Raleway-Medium</string>
+        </mutableArray>
+        <mutableArray key="Raleway-Regular.ttf">
+            <string>Raleway</string>
+            <string>Raleway</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -13,17 +24,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="watch" id="IdO-5z-XZa">
-                                <rect key="frame" x="113" y="218" width="95" height="131"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone" id="IdO-5z-XZa">
+                                <rect key="frame" x="20" y="239" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appleWatch" id="es8-6W-560">
+                                <rect key="frame" x="210" y="239" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="a4A-AM-RHr">
-                                <rect key="frame" x="20" y="480" width="280" height="50"/>
+                                <rect key="frame" x="20" y="480" width="280" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.12156862745098039" green="0.85490196078431369" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="19"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -33,20 +49,29 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authenticate using accelerometer motion." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hZa-6Y-6f1">
-                                <rect key="frame" x="20" y="80" width="280" height="100"/>
+                                <rect key="frame" x="20" y="85" width="280" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Raleway" family="Raleway" pointSize="26"/>
+                                <color key="textColor" red="0.16862745098039217" green="0.25490196078431371" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check" id="8bG-o5-N58">
+                                <rect key="frame" x="85" y="209" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                            </imageView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ylw-t0-aoI"/>
                     <connections>
+                        <outlet property="checkImage" destination="8bG-o5-N58" id="ySM-LX-h9p"/>
                         <outlet property="getStartedButton" destination="a4A-AM-RHr" id="jkF-Fi-fuU"/>
+                        <outlet property="phoneImage" destination="IdO-5z-XZa" id="Q0R-n8-a6s"/>
+                        <outlet property="watchImage" destination="es8-6W-560" id="NM9-J1-YN9"/>
                         <segue destination="7SG-nQ-8Nz" kind="push" identifier="getStarted" id="o8y-5G-Bv4"/>
                     </connections>
                 </viewController>
@@ -54,7 +79,7 @@
             </objects>
             <point key="canvasLocation" x="631" y="305"/>
         </scene>
-        <!--Motion-->
+        <!--Record-->
         <scene sceneID="quz-D7-m03">
             <objects>
                 <viewController id="7SG-nQ-8Nz" customClass="MotionViewController" customModule="watch_motion" customModuleProvider="target" sceneMemberID="viewController">
@@ -63,11 +88,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2pX-AB-JXP">
-                                <rect key="frame" x="20" y="422" width="280" height="50"/>
+                                <rect key="frame" x="20" y="420" width="280" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.85882352941176465" green="0.20000000000000001" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="19"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="REDO">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -77,11 +102,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JEV-88-egB">
-                                <rect key="frame" x="20" y="480" width="280" height="50"/>
+                                <rect key="frame" x="20" y="480" width="280" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.1215686275" green="0.85490196080000003" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="19"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="RECORD">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -90,32 +115,42 @@
                                     <action selector="record:" destination="7SG-nQ-8Nz" eventType="touchUpInside" id="NiG-3F-JtW"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press record and shake your devices in sync!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M4j-TX-c9L">
+                                <rect key="frame" x="20" y="85" width="280" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Raleway" family="Raleway" pointSize="24"/>
+                                <color key="textColor" red="0.16862745098039217" green="0.25490196078431371" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone" id="ZCQ-qg-7fd">
+                                <rect key="frame" x="20" y="239" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appleWatch" id="Z05-Ey-cyL">
+                                <rect key="frame" x="210" y="239" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check" id="6PM-Y8-JgQ">
+                                <rect key="frame" x="85" y="209" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                            </imageView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="VA3-Fd-hJP">
-                                <rect key="frame" x="142" y="377" width="37" height="37"/>
+                                <rect key="frame" x="142" y="265" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="tintColor" red="0.28235294119999998" green="0.62745098040000002" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="color" red="0.28235294119999998" green="0.62745098040000002" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" id="CnP-1G-ejY">
-                                <rect key="frame" x="87" y="193" width="147" height="176"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press record and shake your iPhone!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M4j-TX-c9L">
-                                <rect key="frame" x="20" y="80" width="280" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Motion" id="sVF-jJ-q4z">
+                    <navigationItem key="navigationItem" title="Record" id="sVF-jJ-q4z">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="1Hq-2h-JVM">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -124,60 +159,21 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="checkImage" destination="6PM-Y8-JgQ" id="PeK-jf-uKi"/>
                         <outlet property="isRecording" destination="VA3-Fd-hJP" id="Ggv-0c-v2S"/>
-                        <outlet property="phoneImage" destination="CnP-1G-ejY" id="Rsv-JD-FHC"/>
+                        <outlet property="phoneImage" destination="ZCQ-qg-7fd" id="qAA-FP-Kxs"/>
                         <outlet property="recordButton" destination="JEV-88-egB" id="7PP-Er-xfJ"/>
                         <outlet property="redoButton" destination="2pX-AB-JXP" id="32Z-hg-XOb"/>
                         <outlet property="saveButton" destination="1Hq-2h-JVM" id="68X-Hb-utG"/>
-                        <segue destination="jKX-fD-ecZ" kind="push" identifier="saveMotion" id="G87-tg-NHZ"/>
+                        <outlet property="watchImage" destination="Z05-Ey-cyL" id="oWm-m9-Swn"/>
+                        <segue destination="0VH-DA-wpa" kind="push" identifier="saveMotion" id="TJz-6d-uOP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7PS-h2-RVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1029" y="305"/>
         </scene>
-        <!--Wait View Controller-->
-        <scene sceneID="Bd4-4e-fC4">
-            <objects>
-                <viewController id="jKX-fD-ecZ" customClass="WaitViewController" customModule="watch_motion" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Itk-Dp-qQw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now record motion on your Apple Watch..." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gVB-Gw-Iet">
-                                <rect key="frame" x="20" y="80" width="280" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="watch" id="rsf-aq-bkd">
-                                <rect key="frame" x="113" y="218" width="95" height="131"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                            </imageView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="GxO-EB-ui1">
-                                <rect key="frame" x="142" y="480" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <animations/>
-                                <color key="color" red="0.28235294119999998" green="0.62745098040000002" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </activityIndicatorView>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="yL6-Hc-zNV"/>
-                    <connections>
-                        <outlet property="watchImage" destination="rsf-aq-bkd" id="WfJ-22-HrW"/>
-                        <segue destination="0VH-DA-wpa" kind="push" identifier="authenticate" id="lmy-wi-wm4"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cGi-ZS-dre" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1425" y="305"/>
-        </scene>
-        <!--Result View Controller-->
+        <!--Result-->
         <scene sceneID="k8A-NF-s1U">
             <objects>
                 <viewController id="0VH-DA-wpa" customClass="ResultViewController" customModule="watch_motion" customModuleProvider="target" sceneMemberID="viewController">
@@ -186,7 +182,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eX9-cS-xvI">
-                                <rect key="frame" x="20" y="245" width="280" height="78"/>
+                                <rect key="frame" x="14" y="245" width="280" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
@@ -197,7 +193,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2ZR-yU-Qki">
+                    <navigationItem key="navigationItem" title="Result" id="2ZR-yU-Qki">
                         <barButtonItem key="leftBarButtonItem" title="Restart" id="i9Y-rS-dku">
                             <connections>
                                 <segue destination="Kux-Sh-m1M" kind="unwind" unwindAction="restart:" id="S04-X1-YwA"/>
@@ -211,7 +207,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhm-5c-Ilo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Kux-Sh-m1M" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1818" y="305"/>
+            <point key="canvasLocation" x="1418" y="305"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NV8-6E-NXu">
@@ -240,7 +236,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="phone" width="128" height="128"/>
-        <image name="watch" width="72" height="128"/>
+        <image name="appleWatch" width="256" height="256"/>
+        <image name="check" width="256" height="256"/>
+        <image name="iphone" width="256" height="256"/>
     </resources>
 </document>
