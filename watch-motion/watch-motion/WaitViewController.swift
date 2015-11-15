@@ -13,19 +13,12 @@ class WaitViewController: UIViewController, WCSessionDelegate {
     @IBOutlet weak var watchImage: UIImageView!
 
     var session: WCSession!
+    var recordedData: MotionData! // model passed from previous controller
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Animate
-        let animation = CABasicAnimation(keyPath: "position")
-        animation.duration = 0.07
-        animation.repeatCount = 4
-        animation.autoreverses = true
-        animation.fromValue = NSValue(CGPoint: CGPointMake(watchImage.center.x - 10, watchImage.center.y))
-        animation.toValue = NSValue(CGPoint: CGPointMake(watchImage.center.x + 10, watchImage.center.y))
-        watchImage.layer.addAnimation(animation, forKey: "position")
-
         // Do any additional setup after loading the view.
         if (WCSession.isSupported()) {
             print("WCSession is supported 2")
@@ -35,7 +28,25 @@ class WaitViewController: UIViewController, WCSessionDelegate {
         }
         
         self.sendMessage(["status": "waiting"])
+        
+        
+        // Animate
+        shake(watchImage)
+        
+        print(recordedData.x) // TESTING PURPOSES!
     }
+    
+    // Shake animation
+    private func shake (image: UIImageView) {
+        let animation = CABasicAnimation(keyPath: "position")
+        animation.duration = 0.07
+        animation.repeatCount = 4
+        animation.autoreverses = true
+        animation.fromValue = NSValue(CGPoint: CGPointMake(image.center.x - 10, image.center.y))
+        animation.toValue = NSValue(CGPoint: CGPointMake(image.center.x + 10, image.center.y))
+        image.layer.addAnimation(animation, forKey: "position")
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -16,11 +16,6 @@ class StartViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     @IBAction func getStarted(sender: UIButton) {
         performSegueWithIdentifier("getStarted", sender: self)
     }
@@ -29,6 +24,5 @@ class StartViewController: UIViewController {
     @IBAction func restart (segue:UIStoryboardSegue) {
         print("Restarting")
     }
-
 }
 

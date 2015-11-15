@@ -17,12 +17,7 @@ class MotionInterfaceController: WKInterfaceController, WCSessionDelegate {
     @IBOutlet var saveButton: WKInterfaceButton!
     
     var session: WCSession!
-//    var recorder: CMSensorRecorder!
     var recordedData:MotionData!
-    var start: NSDate!
-    var finish: NSDate!
-    let interval:NSTimeInterval = NSTimeInterval(1) // seconds
-    
     lazy var motionManager = CMMotionManager()
     
     override func awakeWithContext(context: AnyObject?) {
@@ -71,11 +66,12 @@ class MotionInterfaceController: WKInterfaceController, WCSessionDelegate {
         print("STATUS: \(status)")
         
         if status == "waiting" {
-            pushControllerWithName("recordMotion", context: status)
+//            pushControllerWithName("recordMotion", context: status)
         }
-        //
-        //
-        //        replyHandler(["Value":"Hello Watch"])
+        
+//        replyHandler([String:AnyObject]) {
+//            
+//        }
     }
     
     
@@ -102,36 +98,38 @@ class MotionInterfaceController: WKInterfaceController, WCSessionDelegate {
     
     
     func collectData () {
-        // Variables
-        var sampleSize:Int = 0
-        var x:[Double] = [Double]()
-        var y:[Double] = [Double]()
-        var z:[Double] = [Double]()
+        if motionManager.accelerometerAvailable{
+            // Variables
+            var sampleSize:Int = 0
+            var x:[Double] = [Double]()
+            var y:[Double] = [Double]()
+            var z:[Double] = [Double]()
         
-        let queue = NSOperationQueue.mainQueue()
+            let queue = NSOperationQueue.mainQueue()
         
-        print("X\tY\tZ")
+            print("X\tY\tZ")
         
-        motionManager.startAccelerometerUpdatesToQueue(queue, withHandler: {data, error in
-            guard let data = data else{
-                return
-            }
+            motionManager.startAccelerometerUpdatesToQueue(queue, withHandler: {data, error in
+                guard let data = data else{
+                    return
+                }
             
-            if sampleSize++ < 100 {
-                x.append(data.acceleration.x)
-                y.append(data.acceleration.y)
-                z.append(data.acceleration.z)
+                if sampleSize++ < 100 {
+                    x.append(data.acceleration.x)
+                    y.append(data.acceleration.y)
+                    z.append(data.acceleration.z)
                 
-                print(data.acceleration.x, "\t", data.acceleration.y, "\t", data.acceleration.z)
-            } else {
-                    self.recordedData = MotionData(x: x, y: y, z: z)
-                    self.motionManager.stopAccelerometerUpdates()
-                    print("Collected 100 Samples")
-                    print("X COUNT: ", x.count)
-                    print("Y COUNT: ", y.count)
-                    print("Z COUNT: ", z.count)
-                return
-            }
-        })
+                    print(data.acceleration.x, "\t", data.acceleration.y, "\t", data.acceleration.z)
+                } else {
+                        self.recordedData = MotionData(x: x, y: y, z: z)
+                        self.motionManager.stopAccelerometerUpdates()
+                        print("Collected 100 Samples")
+                        print("X COUNT: ", x.count)
+                        print("Y COUNT: ", y.count)
+                        print("Z COUNT: ", z.count)
+                    return
+                }
+            })
+        }
     }
 }

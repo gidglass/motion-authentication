@@ -7,45 +7,56 @@
 //
 
 import UIKit
-import CoreMotion
+import WatchConnectivity
 
 class MotionViewController: UIViewController {
+
+    let SAMPLE_SIZE = 100 // number of samples to record
+
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var redoButton: UIButton!
     @IBOutlet weak var isRecording: UIActivityIndicatorView!
     @IBOutlet weak var phoneImage: UIImageView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
+//    @IBOutlet weak var recordingProgress: UIProgressView!
     
-    lazy var motionManager = CMMotionManager()
-    var recordedData: MotionData!
+    var session: WCSession!
+    var recordedData = MotionData() // model
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Initialize button states
         saveButton.enabled = false
         redoButton.enabled = false
         redoButton.alpha = 0.3
         
+        // Shake phone image
+        shake(phoneImage)
+    }
+    
+    // Shake animation
+    private func shake (image: UIImageView) {
         let animation = CABasicAnimation(keyPath: "position")
         animation.duration = 0.07
         animation.repeatCount = 4
         animation.autoreverses = true
-        animation.fromValue = NSValue(CGPoint: CGPointMake(phoneImage.center.x - 10, phoneImage.center.y))
-        animation.toValue = NSValue(CGPoint: CGPointMake(phoneImage.center.x + 10, phoneImage.center.y))
-        phoneImage.layer.addAnimation(animation, forKey: "position")
+        animation.fromValue = NSValue(CGPoint: CGPointMake(image.center.x - 10, image.center.y))
+        animation.toValue = NSValue(CGPoint: CGPointMake(image.center.x + 10, image.center.y))
+        image.layer.addAnimation(animation, forKey: "position")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
+    /* BUTTON ACTIONS */
     
     @IBAction func saveMotion(sender: UIBarButtonItem) {
         performSegueWithIdentifier("saveMotion", sender: self)
     }
 
     @IBAction func redo(sender: UIButton) {
+        // Clear recorded data
+        recordedData.clearData()
+        
+        // Change button states
         UIView.animateWithDuration(0.3, animations: {
             self.saveButton.enabled = false
             self.redoButton.enabled = false
@@ -56,75 +67,33 @@ class MotionViewController: UIViewController {
     }
     
     @IBAction func record(sender: UIButton) {
-        if motionManager.accelerometerAvailable{
-            // Disable until redo button pressed
-            self.isRecording.startAnimating()
-
-            UIView.animateWithDuration(0.3, animations: {
-                self.recordButton.enabled = false
-                self.recordButton.alpha = 0.3
-            })
-            
-            // Collect sensor data
-            collectData()
-        } else {
-            print("NO SENSOR AVAILABLE")
-        }
-
+        self.isRecording.startAnimating()
+        
+        // Change button states
+        UIView.animateWithDuration(0.3, animations: {
+            self.recordButton.enabled = false
+            self.recordButton.alpha = 0.3
+        })
+        
+        // Collect sensor data
+        recordedData.collectData(SAMPLE_SIZE, handler:toggleButtonStates)
     }
     
-    func collectData () {
-        // Variables
-        var sampleSize:Int = 0
-        var x:[Double] = [Double]()
-        var y:[Double] = [Double]()
-        var z:[Double] = [Double]()
-        
-        let queue = NSOperationQueue.mainQueue()
-
-        print("X\tY\tZ")
-        
-        motionManager.startAccelerometerUpdatesToQueue(queue, withHandler: {data, error in
-            guard let data = data else{
-                return
-            }
-            
-            if sampleSize++ < 100 {
-                x.append(data.acceleration.x)
-                y.append(data.acceleration.y)
-                z.append(data.acceleration.z)
-                
-                print(data.acceleration.x, "\t", data.acceleration.y, "\t", data.acceleration.z)
-            } else {
-                self.recordedData = MotionData(x: x, y: y, z: z)
-                self.motionManager.stopAccelerometerUpdates()
-                print("Collected 100 Samples")
-                print("X COUNT: ", x.count)
-                print("Y COUNT: ", y.count)
-                print("Z COUNT: ", z.count)
-                
-                // Change buttons
-                self.isRecording.stopAnimating()
-                UIView.animateWithDuration(0.3, animations: {
-                    self.redoButton.enabled = true
-                    self.redoButton.alpha = 1.0
-                    self.saveButton.enabled = true
-                })
-
-                return
-            }
+    func toggleButtonStates () {
+        // Change button states when finished recording
+        self.isRecording.stopAnimating()
+        UIView.animateWithDuration(0.3, animations: {
+            self.redoButton.enabled = true
+            self.redoButton.alpha = 1.0
+            self.saveButton.enabled = true
         })
     }
     
-    /*
-    // MARK: - Navigation
+    /* NAVIGATION */
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        // Update model and pass data to next controller
+        let waitVC = segue.destinationViewController as! WaitViewController
+        waitVC.recordedData = self.recordedData.copy()
     }
-    */
-    
-
 }
