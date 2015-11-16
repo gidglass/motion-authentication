@@ -123,7 +123,7 @@
 		209BD76C1BF810BB00128958 /* MotionInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionInterfaceController.swift; sourceTree = "<group>"; };
 		20CDFA211BE9B8CC0076504F /* MotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionViewController.swift; sourceTree = "<group>"; };
 		20D9D3881BED4BD90043D39F /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		20F3499D1BEC489F00CB51D5 /* MotionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionData.swift; sourceTree = "<group>"; };
+		20F3499D1BEC489F00CB51D5 /* MotionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MotionData.swift; path = "watch-motion WatchKit Extension/MotionData.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				20190A931BE65FD400BF53C9 /* AppDelegate.swift */,
+				20F3499D1BEC489F00CB51D5 /* MotionData.swift */,
 				20190A971BE65FD400BF53C9 /* Main.storyboard */,
 				20190A951BE65FD400BF53C9 /* StartViewController.swift */,
 				20CDFA211BE9B8CC0076504F /* MotionViewController.swift */,
@@ -229,7 +230,6 @@
 		20190ACB1BE65FD400BF53C9 /* watch-motion WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				20F3499D1BEC489F00CB51D5 /* MotionData.swift */,
 				209BD76C1BF810BB00128958 /* MotionInterfaceController.swift */,
 				20190AD01BE65FD400BF53C9 /* ExtensionDelegate.swift */,
 				20190AD21BE65FD400BF53C9 /* NotificationController.swift */,

@@ -38,6 +38,30 @@ class MotionData {
         return MotionData(copyData: self)
     }
     
+    private func toDictionary () -> NSDictionary {
+        let dict:[String:[Double]] = [
+            "x": self.x,
+            "y": self.y,
+            "z": self.z
+        ]
+        
+        return dict
+    }
+    
+    func toJSON () -> NSData? {
+        let dict = self.toDictionary()
+        
+        if NSJSONSerialization.isValidJSONObject(dict) {
+            do {
+                let json = try NSJSONSerialization.dataWithJSONObject(dict, options: NSJSONWritingOptions())
+                return json
+            } catch let error as NSError {
+                print("ERROR: Unable to serialize json, error: \(error)")
+            }
+        }
+        return nil
+    }
+    
     func clearData () {
         self.x.removeAll()
         self.y.removeAll()

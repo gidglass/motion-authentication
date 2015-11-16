@@ -30,7 +30,7 @@ class MotionViewController: UIViewController, WCSessionDelegate {
         
         // Check is Apple Watch is reachable
         if (WCSession.isSupported()) {
-            print("WCSession is supported 2")
+            print("WCSession is supported.")
             session = WCSession.defaultSession()
             session.delegate = self
             session.activateSession()
