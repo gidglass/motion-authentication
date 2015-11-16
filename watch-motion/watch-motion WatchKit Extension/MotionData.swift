@@ -70,6 +70,7 @@ class MotionData {
     
     func collectData (SAMPLE_SIZE:Int = 100, callback: () -> ()) {
         if motionManager.accelerometerAvailable {
+            self.clearData()
             var sampleSize:Int = 0
             let queue = NSOperationQueue.mainQueue()
         
