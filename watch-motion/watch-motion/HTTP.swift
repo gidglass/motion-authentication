@@ -21,13 +21,19 @@ class HTTP: NSObject {
         // Initialize session object
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> () in
+            
+            if data == nil {
+                postComplete(success: false, msg: "ERROR")
+                return
+            }
+            
             let parsed = self.fromJSON(data!)
             if let responseData = parsed {
                 let success = responseData["success"] as! Int
                 if (success == 0) {
                     postComplete(success: true, msg: "SUCCESS")
                 } else {
-                    postComplete(success: true, msg: "FAILURE")
+                    postComplete(success: false, msg: "FAILURE")
                 }
             } else {
                 postComplete(success: false, msg: "ERROR")
