@@ -181,8 +181,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eX9-cS-xvI">
-                                <rect key="frame" x="14" y="245" width="280" height="78"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eX9-cS-xvI">
+                                <rect key="frame" x="20" y="245" width="280" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
@@ -202,6 +202,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="restartButton" destination="i9Y-rS-dku" id="VsL-j3-qYc"/>
+                        <outlet property="statusLabel" destination="eX9-cS-xvI" id="vG7-hu-xIV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhm-5c-Ilo" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -31,6 +31,8 @@
 		208881EA1BF8E21A00ECFE1B /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 208881E21BF8E21A00ECFE1B /* Raleway-Regular.ttf */; };
 		208881EB1BF8E21A00ECFE1B /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 208881E21BF8E21A00ECFE1B /* Raleway-Regular.ttf */; };
 		209BD76D1BF810BB00128958 /* MotionInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209BD76C1BF810BB00128958 /* MotionInterfaceController.swift */; };
+		20B11E5C1BFD7162001043AE /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B11E5B1BFD7162001043AE /* HTTP.swift */; };
+		20B11E5D1BFD7162001043AE /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B11E5B1BFD7162001043AE /* HTTP.swift */; };
 		20CDFA221BE9B8CC0076504F /* MotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CDFA211BE9B8CC0076504F /* MotionViewController.swift */; };
 		20D9D3891BED4BD90043D39F /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D9D3881BED4BD90043D39F /* ResultViewController.swift */; };
 		20F3499E1BEC489F00CB51D5 /* MotionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F3499D1BEC489F00CB51D5 /* MotionData.swift */; };
@@ -121,6 +123,7 @@
 		208881E11BF8E21A00ECFE1B /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Medium.ttf"; path = "../../Downloads/Raleway/Raleway-Medium.ttf"; sourceTree = "<group>"; };
 		208881E21BF8E21A00ECFE1B /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Regular.ttf"; path = "../../Downloads/Raleway/Raleway-Regular.ttf"; sourceTree = "<group>"; };
 		209BD76C1BF810BB00128958 /* MotionInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionInterfaceController.swift; sourceTree = "<group>"; };
+		20B11E5B1BFD7162001043AE /* HTTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
 		20CDFA211BE9B8CC0076504F /* MotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionViewController.swift; sourceTree = "<group>"; };
 		20D9D3881BED4BD90043D39F /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		20F3499D1BEC489F00CB51D5 /* MotionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MotionData.swift; path = "watch-motion WatchKit Extension/MotionData.swift"; sourceTree = SOURCE_ROOT; };
@@ -187,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				20190A931BE65FD400BF53C9 /* AppDelegate.swift */,
+				20B11E5B1BFD7162001043AE /* HTTP.swift */,
 				20F3499D1BEC489F00CB51D5 /* MotionData.swift */,
 				20190A971BE65FD400BF53C9 /* Main.storyboard */,
 				20190A951BE65FD400BF53C9 /* StartViewController.swift */,
@@ -467,6 +471,7 @@
 				20190A961BE65FD400BF53C9 /* StartViewController.swift in Sources */,
 				20190A941BE65FD400BF53C9 /* AppDelegate.swift in Sources */,
 				20CDFA221BE9B8CC0076504F /* MotionViewController.swift in Sources */,
+				20B11E5C1BFD7162001043AE /* HTTP.swift in Sources */,
 				20F3499E1BEC489F00CB51D5 /* MotionData.swift in Sources */,
 				20D9D3891BED4BD90043D39F /* ResultViewController.swift in Sources */,
 			);
@@ -492,6 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20B11E5D1BFD7162001043AE /* HTTP.swift in Sources */,
 				20F3499F1BEC489F00CB51D5 /* MotionData.swift in Sources */,
 				20190AD31BE65FD400BF53C9 /* NotificationController.swift in Sources */,
 				209BD76D1BF810BB00128958 /* MotionInterfaceController.swift in Sources */,

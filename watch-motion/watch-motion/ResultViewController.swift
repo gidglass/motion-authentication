@@ -10,6 +10,7 @@ import UIKit
 
 class ResultViewController: UIViewController {
     @IBOutlet weak var restartButton: UIBarButtonItem!
+    @IBOutlet weak var statusLabel: UILabel!
     
     var phoneData: MotionData!
     var watchData: MotionData!
@@ -18,18 +19,24 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         
         // Convert MotionData to JSON format
-        let phoneJSON = phoneData.toJSON()
-        let watchJSON = watchData.toJSON()
+        let data = ["phone": phoneData.toDictionary(), "watch": watchData.toDictionary()]
+        
+        // Make HTTP request
+        let http = HTTP()
+        let requestJSON = http.toJSON(data)
+        http.POST("URL_GOES_HERE", requestJSON: requestJSON!, postComplete: {(success: Bool, msg: String) in
+            if success {
+                self.statusLabel.text = "Success!"
+            } else {
+                self.statusLabel.text = "Failure!"
+            }
+        })
+        
+        // TODO: Also send message to watch to update UI
         
         // Print to console for debugging
-        print("PHONE DATA:")
-        print(NSString(data: phoneJSON!, encoding: NSUTF8StringEncoding) as! String, "\n")
+        print("JSON DATA:")
+        print(NSString(data: requestJSON!, encoding: NSUTF8StringEncoding) as! String, "\n")
         
-        print("WATCH DATA:")
-        print(NSString(data: watchJSON!, encoding: NSUTF8StringEncoding) as! String,  "\n")
-        
-        // TODO: Make HTTP POST request and get authentication status as response
-        // Update status label to reflect, "Success" or "Failure"
-
     }
 }

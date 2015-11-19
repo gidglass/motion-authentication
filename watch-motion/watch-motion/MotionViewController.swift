@@ -157,5 +157,10 @@ class MotionViewController: UIViewController, WCSessionDelegate {
         let resultVC = segue.destinationViewController as! ResultViewController
         resultVC.phoneData = self.phoneData.copy()
         resultVC.watchData = self.watchData.copy()
+        
+        // TODO: Move HTTP request to here
+        // then send message to watch with response
+        // to update UI and grab label on next controller
+        // to update it's UI as well!
     }
 }
