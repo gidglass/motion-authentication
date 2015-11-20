@@ -24,19 +24,24 @@ class HTTP: NSObject {
             
             if data == nil {
                 postComplete(success: false, msg: "ERROR")
+                print("Error data is nil")
                 return
             }
-            
+
             let parsed = self.fromJSON(data!)
             if let responseData = parsed {
-                let success = responseData["success"] as! Int
-                if (success == 0) {
+                let success = responseData["status"] as! String
+                if (success == "1") {
                     postComplete(success: true, msg: "SUCCESS")
+                    print("Success!")
                 } else {
+                    print(responseData)
                     postComplete(success: false, msg: "FAILURE")
+                    print("Failure!")
                 }
             } else {
                 postComplete(success: false, msg: "ERROR")
+                print("Error in response!")
             }
         })
         task.resume()

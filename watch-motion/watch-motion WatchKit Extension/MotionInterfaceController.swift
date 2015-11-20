@@ -15,6 +15,7 @@ class MotionInterfaceController: WKInterfaceController, WCSessionDelegate {
     var recordedData = MotionData()
     var session: WCSession!
     var currentState = UserState.Waiting
+    let SAMPLE_SIZE = 200
     
     // Still tweaking - trying to make sure watch in sync with iPhone...
     enum UserState {
@@ -64,7 +65,7 @@ class MotionInterfaceController: WKInterfaceController, WCSessionDelegate {
                 self.currentState = .Recording
                 self.statusLabel.setText("Recording motion!")
             }
-            self.recordedData.collectData(callback: {
+            self.recordedData.collectData(SAMPLE_SIZE, callback: {
                 
                 let watchData = [
                     "x": self.recordedData.x,

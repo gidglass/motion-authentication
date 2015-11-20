@@ -53,7 +53,7 @@ class MotionData {
         self.z.removeAll()
     }
     
-    func collectData (SAMPLE_SIZE:Int = 100, callback: () -> ()) {
+    func collectData (SAMPLE_SIZE:Int = 200, callback: () -> ()) {
         if motionManager.accelerometerAvailable {
             self.clearData()
             var sampleSize:Int = 0

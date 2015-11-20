@@ -11,7 +11,7 @@ import WatchConnectivity
 
 class MotionViewController: UIViewController, WCSessionDelegate {
 
-    let SAMPLE_SIZE = 100 // number of samples to record
+    let SAMPLE_SIZE = 200 // number of samples to record
 
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var redoButton: UIButton!
