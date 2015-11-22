@@ -33,7 +33,7 @@ class ResultViewController: UIViewController {
         // Make HTTP request
         let http = HTTP()
         let requestJSON = http.toJSON(data)
-        http.POST("http://10.128.10.207:8000/checkSync/", requestJSON: requestJSON!, postComplete: {(success: Bool, msg: String) in
+        http.POST("https://young-meadow-1985.herokuapp.com/checkSync/", requestJSON: requestJSON!, postComplete: {(success: Bool, msg: String) in
             dispatch_async(dispatch_get_main_queue()) {
                 if success {
                     self.authenticating.stopAnimating()
@@ -61,7 +61,6 @@ class ResultViewController: UIViewController {
         
         // Print to console for debugging
 //        print("JSON DATA:")
-        print(self.watchData.x.count)
 //        print(NSString(data: requestJSON!, encoding: NSUTF8StringEncoding) as! String, "\n")
         
     }
